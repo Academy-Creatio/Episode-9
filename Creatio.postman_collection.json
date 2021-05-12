@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "ad418783-130e-4191-b567-dee9b18f2ff3",
+		"name": "Creatio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DataService",
+			"item": [
+				{
+					"name": "Get Current User Contact - Cookie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "BPMCSRF",
+								"value": "{{BPMCSRF}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"RootSchemaName\": \"Contact\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}/0/DataService/json/SyncReply/SelectQuery",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"0",
+								"DataService",
+								"json",
+								"SyncReply",
+								"SelectQuery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current User Contact - Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rootSchemaName\": \"Contact\",\r\n    \"columns\": {\r\n        \"items\": {\r\n            \"Id\": {\r\n                \"expression\": {\r\n                    \"columnPath\": \"Id\"\r\n                }\r\n            },\r\n            \"Name\": {\r\n                \"expression\": {\r\n                    \"columnPath\": \"Name\"\r\n                }\r\n            },\r\n            \"Email\": {\r\n                \"expression\": {\r\n                    \"columnPath\": \"Email\"\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}/0/DataService/json/SyncReply/SelectQuery",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"0",
+								"DataService",
+								"json",
+								"SyncReply",
+								"SelectQuery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current User Contact - Token Old",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkY1MDgxRDAyNUE1QkZFRjJCRjQ5RTBFQTY2NENDMERBOTkyNDQzRjAiLCJ0eXAiOiJKV1QiLCJ4NXQiOiI5UWdkQWxwYl92S19TZURxWmt6QTJwa2tRX0EifQ.eyJuYmYiOjE2MjA4MDE5OTUsImV4cCI6MTYyMDgwNTU5NSwiaXNzIjoiY3JlYXRpby5jb20iLCJhdWQiOlsiY3JlYXRpby5jb20vcmVzb3VyY2VzIiwiQXBwbGljYXRpb25BY2Nlc3NfM2U3MDhkOWZkMGQzNDlhNzhjNTc1ZjY5Yjg5MDg4MDYiXSwiY2xpZW50X2lkIjoiMzg1MEVBQUYwRTU1RkMzQzRGNkNGOTdDODcwOUIwRTIiLCJwcm9wOlN5c0FkbWluVW5pdElkIjoiN2YzYjg2OWYtMzRmMy00ZjIwLWFiNGQtNzQ4MGE1ZmRmNjQ3IiwicHJvcDpUeXBlIjoiQXBwbGljYXRpb25BY2Nlc3MiLCJwcm9wOk93bmVyQ2xpZW50SWQiOiJjcmVhdGlvLWRlc2lnbmVyIiwicHJvcDpSZXNvdXJjZUlkIjoiQXBwbGljYXRpb25BY2Nlc3NfM2U3MDhkOWZkMGQzNDlhNzhjNTc1ZjY5Yjg5MDg4MDYiLCJzY29wZSI6WyJBcHBsaWNhdGlvbkFjY2Vzc18zZTcwOGQ5ZmQwZDM0OWE3OGM1NzVmNjliODkwODgwNiJdfQ.a_9YallsYdBhVr3BH8w4_BrzwLqVWPbZZJ5JTzFnNJLyJ4sRJlhmVgfuqOwGiffj7XW5NDyp-EPTMQF1X2ewq_UlNF1_Z3cRamAdPq1OMFRdwU07SeQ0v7Bn3XZ9UpDS6TezeYeIr3eC0hNBtL_gQT2FhnGygz0AA2bR8Afi1ACUSO9BUiF5aPfZmjWzjsaVscI7DT8gsagWf5xNhPlhYJig-CH8VVzrc2xH92C_BjSYtdWeNooNmxdqh0PNEqQk473Vf4fEE4VlqQRZXCRHpwnj_rWCOhB4T8UHecc29ihEYgbLXB21AXsRIx7KSt71J9ExUtps77HmswE2T_pubw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rootSchemaName\": \"Contact\",\r\n    \"columns\": {\r\n        \"items\": {\r\n            \"Id\": {\r\n                \"expression\": {\r\n                    \"columnPath\": \"Id\"\r\n                }\r\n            },\r\n            \"Name\": {\r\n                \"expression\": {\r\n                    \"columnPath\": \"Name\"\r\n                }\r\n            },\r\n            \"Email\": {\r\n                \"expression\": {\r\n                    \"columnPath\": \"Email\"\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}/0/DataService/json/SyncReply/SelectQuery",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"0",
+								"DataService",
+								"json",
+								"SyncReply",
+								"SelectQuery"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var BPMCSRF = postman.getResponseCookie(\"BPMCSRF\").value;\r",
+							"pm.environment.set(\"BPMCSRF\", BPMCSRF);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "ForceUseSession",
+						"type": "text",
+						"value": "true"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n  \"UserName\":\"{{UserName}}\",\r\n  \"UserPassword\":\"{{UserPassword}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/ServiceModel/AuthService.svc/Login",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"ServiceModel",
+						"AuthService.svc",
+						"Login"
+					]
+				},
+				"description": "Request to the AuthService.svc authentication service"
+			},
+			"response": [
+				{
+					"name": "[200] Gets authentication cookies",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							},
+							{
+								"key": "ForceUseSession",
+								"type": "text",
+								"value": "true"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n  \"UserName\":\"{{UserName}}\",\r\n  \"UserPassword\":\"{{UserPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://myserver.com/ServiceModel/AuthService.svc/Login",
+							"protocol": "http",
+							"host": [
+								"myserver",
+								"com"
+							],
+							"path": [
+								"ServiceModel",
+								"AuthService.svc",
+								"Login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Location",
+							"value": "/0"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Terrasoft-UserCulture",
+							"value": "ru-RU"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": ".ASPXAUTH=D74B814D5E2C4C7B124C94B2AB1E1302F6D5956D6E6FBAE08BB46BCC8EE6A05CC67319EBDA3EFFE035624C7BE0329F584FFBAF9AF70B24BFFEED44115327DE39867DEC44A579BBAF514AF3F5484AAE6CF5753E541F28F5E08A8773A4D9B7DC3C9A805AD9EDCFFA4D9789D80CEA5726760019DF7C5C5929C653C4AD24E77C7945822B89B921A1F16ADF6E0EF65FEDA6CE0FBA6EC830779059575B725C554A44AC1AF966572B75D243722FEB22A497901E6B7717D1CCF192428E52D76B6508A489889C70A1E9F5FEC03011347BAB1CAD3BC3DFA0E36B7B050929176FD43487D189BFFA4034D6D239C3DDE00D81800EA4847CED2C30DDA34F098FBF1E945671863822C1118E63A8F68AB8487E8B3C75EBE5AF7BD41BF7FA8E6C3741CDE6775A135C30708ED6436183357F43DDC2826A54CCA15246B4CF3C0D7C2AE53723590BBAE43B8EA120B73C7700C2AED5589D70877647ADB27159081626D0111F9902ECE4E79B357D0E; path=/; HttpOnly"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BPMCSRF=Y4s3IaCGUaEwFcgkGKCbH.; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "UserName=83|117|112|101|114|118|105|115|111|114; expires=Sat, 09-May-2020 11:14:30 GMT; path=/; HttpOnly"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Apr 2020 11:14:30 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "84"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Code\": 0,\n    \"Message\": \"\",\n    \"Exception\": null,\n    \"PasswordChangeUrl\": null,\n    \"RedirectUrl\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Authentication Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();\r",
+							"pm.environment.set(\"access_token\", response.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{ClientSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{ClientId}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Base_URL_IS}}/connect/token",
+					"host": [
+						"{{Base_URL_IS}}"
+					],
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "onSuccess token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL_IS}}/connect/token",
+							"host": [
+								"{{Base_URL_IS}}"
+							],
+							"path": [
+								"connect",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, max-age=0"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 May 2021 05:14:43 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IkY1MDgxRDAyNUE1QkZFRjJCRjQ5RTBFQTY2NENDMERBOTkyNDQzRjAiLCJ0eXAiOiJKV1QiLCJ4NXQiOiI5UWdkQWxwYl92S19TZURxWmt6QTJwa2tRX0EifQ.eyJuYmYiOjE2MjA3OTY0ODMsImV4cCI6MTYyMDgwMDA4MywiaXNzIjoiY3JlYXRpby5jb20iLCJhdWQiOlsiY3JlYXRpby5jb20vcmVzb3VyY2VzIiwiQXBwbGljYXRpb25BY2Nlc3NfY2ExYTZiY2QxNjE4NGQ3ODg1ZDU3MjcyZTE4OWQwZGQiXSwiY2xpZW50X2lkIjoiOTZGN0ZCQkJGMUREMURCMjRCRTE5NDIzOUEzNkExODUiLCJwcm9wOlN5c0FkbWluVW5pdElkIjoiN2YzYjg2OWYtMzRmMy00ZjIwLWFiNGQtNzQ4MGE1ZmRmNjQ3IiwicHJvcDpUeXBlIjoiQXBwbGljYXRpb25BY2Nlc3MiLCJwcm9wOk93bmVyQ2xpZW50SWQiOiJjcmVhdGlvLWRlc2lnbmVyIiwicHJvcDpSZXNvdXJjZUlkIjoiQXBwbGljYXRpb25BY2Nlc3NfY2ExYTZiY2QxNjE4NGQ3ODg1ZDU3MjcyZTE4OWQwZGQiLCJzY29wZSI6WyJBcHBsaWNhdGlvbkFjY2Vzc19jYTFhNmJjZDE2MTg0ZDc4ODVkNTcyNzJlMTg5ZDBkZCJdfQ.vinLY6E3lTsq94vRlOh7aq3hDKEBHpGU-IZOhP2zhYca9NZTLrSgKxmfxqtJjBYmdqQ2UkuaJm83j1FgQT54-iKipmukhiw9jPmQ5gtH0OJ_XusNZ9jqDrcil6COdiOIM7L2Nc4BRN4LNUNVnNaMir8EMcua7f1vIkr7Wz_QXgFpz8kD2RH9xgYttCvSfT8bQLELP5ldwGKkigagCmAFt7CNkMZG8bJV1Y3i7rZIVDM_qGhCU2gnHaMaSulwYEpXjobeJK-_3qG_SHhmTzehrG4F1i_mUxx8T3QwKCBx9aNUxiOzIVSquOfcH2XEtxuPqLZ9zSMeiZFo7rZiJdhvNA\",\n    \"expires_in\": 3600,\n    \"token_type\": \"Bearer\"\n}"
+				},
+				{
+					"name": "onFail token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL_IS}}/connect/token",
+							"host": [
+								"{{Base_URL_IS}}"
+							],
+							"path": [
+								"connect",
+								"token"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, max-age=0"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 May 2021 05:16:04 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"invalid_request\"\n}"
+				}
+			]
+		}
+	]
+}
